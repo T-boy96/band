@@ -1,5 +1,7 @@
 const menubuttons = document.querySelectorAll('.menu button');
 const sections = document.querySelectorAll('.content section');
+const dates = document.querySelectorAll('#dates a');
+const contactLinks = document.querySelectorAll('#contact a');
 
 menubuttons.forEach(mb => {
     mb.addEventListener('click', () => {
@@ -12,3 +14,19 @@ menubuttons.forEach(mb => {
         });
     });
 });
+
+function clickHandler(e) {
+    window.goatcounter.count({
+        path: 'Clicked on ' + this.href,
+        title: this.parentElement.parentElement.id + '/' + this.innerHTML,
+        event: true,
+    });
+}
+
+dates.forEach(d => {
+    d.addEventListener('click', clickHandler);
+});
+
+contactLinks.forEach(cl => {
+    cl.addEventListener('click', clickHandler);
+})
