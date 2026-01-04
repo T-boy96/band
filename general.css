@@ -1,0 +1,53 @@
+body {
+    display: block;
+    background-color: rgb(20, 20, 20);
+    font-weight: 600;
+    color: white;
+}
+
+/*MENU*/
+td#menucolumn {
+    max-width: 400px;
+}
+
+.menu button {
+    cursor: pointer;
+}
+
+.menu button.active {
+    background: #333;
+    color: white;
+    font-weight: bold;
+}
+
+/*CONTENT*/
+td.content {
+    vertical-align: top;
+}
+
+.inconsolata-IC {
+    font-family: "Inconsolata", monospace;
+    font-optical-sizing: auto;
+    font-weight: 270;
+    font-style: normal;
+}
+
+h2 {
+    margin-inline-start: 10px;
+}
+
+p {
+    margin: 25px;
+    margin-left: 0px;
+}
+
+a {
+    color: limegreen;
+    font-weight: 300;
+    text-decoration: none;
+
+}
+
+a:hover {
+    font-weight: 500;
+}
