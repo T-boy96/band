@@ -3,6 +3,15 @@ const sections = document.querySelectorAll('.content section');
 const dates = document.querySelectorAll('#dates a');
 const contactLinks = document.querySelectorAll('#contact a');
 
+const menuButtonMobile = document.querySelector('.menu-button');
+
+menuButtonMobile.addEventListener('click', () => {
+    menuButtonMobile.classList.toggle('active');
+    const expanded = menuButtonMobile.getAttribute('aria-expanded') === 'true';
+    menuButtonMobile.setAttribute('aria-expanded', String(!expanded));
+});
+
+
 menubuttons.forEach(mb => {
     mb.addEventListener('click', () => {
         const targetId = mb.dataset.target;

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navigation Inaktiv Official Site</title>
     <link rel="stylesheet" href="general.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
     </style>
@@ -14,14 +14,19 @@
 </head>
 
 <body class="inconsolata-IC">
-    <table style="border-spacing: 20px 0;">
+    <div class="menu-button">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <table>
         <tr>
-            <td id="menucolumn"><img src="images/logo.jpg" style="max-width:inherit" alt=""></td>
+            <td class="menucolumn"><img id="band_logo" src="images/band_logo.png" alt="band logo"></td>
             <td class="content">
                 <section id="about">
                     <h2>About</h2>
                     <p>We are a hungarian group of close friends and family that started playing together in 2024.</p>
-                    <table style="border-collapse: separate;border-spacing: 40px 0;">
+                    <table id="members" style="border-collapse: separate;border-spacing: 40px 0;">
                         <tr>
                             <td>Drum & Bass</td>
                             <td>Antal Gergő, Baranyi Ádám</td>
@@ -61,7 +66,7 @@
             </td>
         </tr>
         <tr>
-            <td id="menucolumn">
+            <td class="menucolumn">
                 <menu class="menu" style="text-align:center; padding-inline-start: 0px;">
                     <button class="active" data-target="about">About</button>
                     <button data-target="music">Music</button>
