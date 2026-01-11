@@ -13,13 +13,14 @@ body {
     align-items: center;
     border-radius: 6px;
     cursor: pointer;
+    padding: 0px;
 }
 
 .menu-button span {
     display: block;
-    width: 30px;
-    height: 5px;
-    margin: 3px 0;
+    width: 24px;
+    height: 3px;
+    margin: 4px 0;
     background-color: white;
     border-radius: 2px;
     transition: all 0.3s ease;
@@ -27,16 +28,15 @@ body {
 }
 
 .menu-button.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+    transform: rotate(45deg) translate(7.5px, 8px);
 }
 
 .menu-button.active span:nth-child(2) {
     opacity: 0;
-    /* hide middle line */
 }
 
 .menu-button.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
+    transform: rotate(-45deg) translate(7.5px, -8px);
 }
 
 /* ==============================
