@@ -24,6 +24,24 @@ menubuttons.forEach(mb => {
     });
 });
 
+const mediaQuery = window.matchMedia('(min-width: 1024px)');
+
+const triggertds = document.querySelectorAll('.trigger-td')
+triggertds.forEach(td => {
+    if (mediaQuery.matches) {
+        td.addEventListener('mouseenter', function () {
+            const cell = this.nextElementSibling;
+            const secondCell = cell.nextElementSibling;
+            cell.setAttribute('hidden', '');
+            secondCell.classList.add('is-visible');
+        }, { once: true });
+
+    } else {
+        const cell = td.nextElementSibling;
+        cell.setAttribute('hidden', '');
+    }
+});
+
 function clickHandler(e) {
     window.goatcounter.count({
         path: 'Clicked on ' + this.href,

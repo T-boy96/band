@@ -1,6 +1,6 @@
 body {
     background-color: rgb(20, 20, 20);
-    color: white;
+    color: lightcyan;
 }
 
 .menu-button {
@@ -21,7 +21,7 @@ body {
     width: 24px;
     height: 3px;
     margin: 4px 0;
-    background-color: white;
+    background-color: lightcyan;
     border-radius: 2px;
     transition: all 0.3s ease;
     transform-origin: center;
@@ -37,6 +37,67 @@ body {
 
 .menu-button.active span:nth-child(3) {
     transform: rotate(-45deg) translate(7.5px, -8px);
+}
+
+/* ==========================================================================
+   Button Reset
+   ========================================================================== */
+
+.button-reset {
+    /* Remove all native styles */
+    appearance: none;
+    -webkit-appearance: none;
+    background: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+
+    /* Inherit typography */
+    font: inherit;
+    color: inherit;
+    letter-spacing: inherit;
+
+    /* Layout control */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25em;
+
+    /* Interaction */
+    cursor: pointer;
+    user-select: none;
+    text-align: inherit;
+    text-decoration: none;
+
+    /* Mobile tap behavior */
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Keyboard focus (modern, non-annoying) */
+.button-reset:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+}
+
+/* Remove focus ring for mouse users */
+.button-reset:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* Disabled state */
+.button-reset:disabled,
+.button-reset[aria-disabled="true"] {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+/* High-contrast / forced-colors support */
+@media (forced-colors: active) {
+    .button-reset {
+        forced-color-adjust: auto;
+        border: 1px solid ButtonText;
+    }
 }
 
 /* ==============================
@@ -70,13 +131,17 @@ body {
     }
 
     .menu button {
-        font-weight: 600;
+        font-weight: 400;
+        color: lightcyan;
     }
 
     .menu button.active {
-        background: #333;
-        color: white;
-        /*font-weight: bold;*/
+        font-weight: 800;
+    }
+
+    /* -- & --*/
+    button span span {
+        color: limegreen;
     }
 
     /*CONTENT*/
@@ -130,7 +195,26 @@ body {
     /*MENU*/
     .menu button {
         cursor: pointer;
-        font-weight: 600;
+        font-weight: 400;
+        font-size: large;
+    }
+
+    .menu button:hover {
+        color: limegreen;
+    }
+
+    .menu button.active:hover {
+        color: inherit;
+        cursor: default;
+    }
+
+    /* -- & -- */
+    button span:hover span {
+        color: lightcyan;
+    }
+
+    button.active span:hover span {
+        color: limegreen;
     }
 
     /*CONTENT*/
@@ -144,6 +228,39 @@ body {
 
     td.content {
         width: auto;
+    }
+
+    .trigger-td:hover {
+        font-weight: bold;
+        cursor: default;
+    }
+
+    .trigger-td span {
+        color: limegreen;
+    }
+
+    .trigger-td:hover span {
+        color: lightcyan;
+    }
+
+    .hidden-td {
+        opacity: 0;
+        width: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        transition:
+            opacity 0.5s ease,
+            width 0.5s ease;
+        display: table-cell;
+    }
+
+    .hidden-td.is-visible {
+        opacity: 1;
+    }
+
+    td.is-non-visible {
+        opacity: 0;
+        cursor: default;
     }
 
     h2 {
@@ -165,4 +282,9 @@ body {
     img#band_logo {
         max-width: inherit;
     }
+
+
+
+
+
 }
