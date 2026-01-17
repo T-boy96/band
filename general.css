@@ -3,7 +3,7 @@ body {
     color: lightcyan;
 }
 
-.menu-button {
+.hamburger {
     width: 48px;
     height: 48px;
     background-color: rgba(0, 0, 0, 0);
@@ -16,7 +16,7 @@ body {
     padding: 0px;
 }
 
-.menu-button span {
+.hamburger span {
     display: block;
     width: 24px;
     height: 3px;
@@ -27,15 +27,15 @@ body {
     transform-origin: center;
 }
 
-.menu-button.active span:nth-child(1) {
+.hamburger.active span:nth-child(1) {
     transform: rotate(45deg) translate(7.5px, 8px);
 }
 
-.menu-button.active span:nth-child(2) {
+.hamburger.active span:nth-child(2) {
     opacity: 0;
 }
 
-.menu-button.active span:nth-child(3) {
+.hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translate(7.5px, -8px);
 }
 
@@ -104,7 +104,7 @@ body {
    TABLET (≥ 768px)
 ================================ */
 @media (min-width: 768px) {
-    .menu-button {
+    .hamburger {
         display: none;
     }
 
@@ -121,6 +121,8 @@ body {
     table#members {
         margin: 0;
         font-size: smaller;
+        border-collapse: separate;
+        border-spacing: 40px 0;
     }
 
     /*MENU*/
@@ -147,7 +149,11 @@ body {
     /*CONTENT*/
     td.content {
         vertical-align: top;
-        width: 400px;
+        width: 410px;
+    }
+
+    .instrument span {
+        color: limegreen;
     }
 
     .inconsolata-IC {
@@ -235,7 +241,7 @@ body {
         cursor: default;
     }
 
-    .trigger-td span {
+    .trigger-td {
         color: limegreen;
     }
 
