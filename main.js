@@ -48,6 +48,6 @@ function clickHandler(e) {
     });
 }
 
-[dates, contactLinks].forEach(link => {
+[...dates, ...contactLinks].forEach(link => {
     link.addEventListener('click', clickHandler);
 });
