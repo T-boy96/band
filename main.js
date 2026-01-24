@@ -7,6 +7,7 @@ const triggerTds = document.querySelectorAll('.trigger-td')
 const contentSections = document.querySelectorAll('.content section');
 const dates = document.querySelectorAll('#dates a');
 const contactLinks = document.querySelectorAll('#contact a');
+const emailAddr = "ninaktiv [at] GMX [dot] com";
 
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
@@ -25,8 +26,6 @@ menuButtons.forEach(mb => {
         });
     });
 });
-
-
 
 triggerTds.forEach(td => {
     const cell = td.nextElementSibling;
@@ -51,3 +50,10 @@ function clickHandler(e) {
 [...dates, ...contactLinks].forEach(link => {
     link.addEventListener('click', clickHandler);
 });
+
+function showEmail() {
+    const showEmailButton = document.getElementById("showEmail");
+    const showEmail = document.getElementById("e");
+    showEmail.textContent = emailAddr;
+    showEmailButton.style.display = "none";
+}
