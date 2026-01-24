@@ -8,6 +8,7 @@ const contentSections = document.querySelectorAll('.content section');
 const dates = document.querySelectorAll('#dates a');
 const contactLinks = document.querySelectorAll('#contact a');
 const emailAddr = "ninaktiv [at] GMX [dot] com";
+const showEmailButton = document.getElementById("showEmail");
 
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
@@ -51,9 +52,9 @@ function clickHandler(e) {
     link.addEventListener('click', clickHandler);
 });
 
-function showEmail() {
-    const showEmailButton = document.getElementById("showEmail");
+
+showEmailButton.addEventListener('click', () => {
     const showEmail = document.getElementById("e");
     showEmail.textContent = emailAddr;
     showEmailButton.style.display = "none";
-}
+});
